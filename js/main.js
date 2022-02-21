@@ -9,3 +9,4 @@ const COUNT_COMMENT = function (userComment, maxlength) {
   }
 };
 COUNT_COMMENT('Комментарий посетителя сайта');
+
