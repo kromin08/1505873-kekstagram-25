@@ -1,8 +1,8 @@
 // Источник: http://kodesource.top/javascript/form/string-length.php
-const COUNT_COMMENT = function (userComment, maxlength) {
-  maxlength = 140;
+const MAX_LENGHT = 140;
+const COUNT_COMMENT = function (userComment) {
   const LENGTH_COMMENT = userComment.length;
-  if (LENGTH_COMMENT <= maxlength) {
+  if (LENGTH_COMMENT <= MAX_LENGHT) {
     return true;
   } else {
     Error('Максимальное количество символов комментария не более 140');
