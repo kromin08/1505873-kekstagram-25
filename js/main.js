@@ -3,10 +3,8 @@ let countComment = function (userComment, maxlength) {
   maxlength = 140;
   let lenghtComment = userComment.length;
   if (lenghtComment <= maxlength) {
-    console.log('Спасибо за ваш комментарий');
     return true;
   } else {
-    console.log('Максимальное количество символов 140');
     return false;
   }
 }
