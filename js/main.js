@@ -28,7 +28,6 @@ const names = ['Паша', 'Гагик', 'Эмили', 'Эльвира', 'Алё
 let id = 1;
 
 // Источник: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-// eslint-disable-next-line no-unused-vars
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -60,20 +59,5 @@ const getNewObjects = () => {
   };
 };
 
-/* const newObjects = Array.from({ length: 25 }, getNewObjects);
-window.console.log(newObjects); */
-
-
-const getNewObjects1 = (numberObjectsCreate) => {
-  const createKey = [];
-  for (let i = 0; i <= numberObjectsCreate - 1; i++) {
-    createKey[i] = {};
-    createKey[i].id = i;
-    createKey[i].url = `photos/${i}.jpg`;
-    createKey[i].description = getRandomArrayObject(description);
-    createKey[i].likes = getRandomIntInclusive(15, 200);
-    createKey[i].comments = [getRandomArrayObject(comments), `img/avatar-${getRandomIntInclusive(1, 6)}.svg`, getRandomArrayObject(names)];
-  }
-  return createKey;
-};
-window.console.log(getNewObjects1(25));
+const newObjects = Array.from({ length: 25 }, getNewObjects);
+window.console.log(newObjects);
