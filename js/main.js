@@ -11,22 +11,6 @@ const countComment = function (userComment) {
 countComment('Комментарий посетителя сайта');
 
 // 4.9 Больше деталей.
-const getNewObjects1 = (numberObjectsCreate) => {
-  const createKey = [];
-  for (let i = 0; i <= numberObjectsCreate - 1; i++) {
-    createKey[i] = {};
-    createKey[i].id = i;
-    createKey[i].url = 9;
-    createKey[i].description = 'Первый';
-    createKey[i].likes = '199';
-    createKey[i].avatar = '25';
-    createKey[i].comments = 'В целом Плохо.';
-  }
-  return createKey;
-};
-getNewObjects1(25);
-
-
 const description = ['Отель и море', 'Указатель к морю', 'Сейшеллы', 'Фотобикини',
   'Онсен-Кари', 'МакЛарен', 'Диета', 'Морс', 'Пляж и самолёт', 'Удобство хранения', 'Тропинка к пляжу',
   'RS5 на сликах', 'Высокая морская кухня', 'Суси из котэ', 'Домашние унты', 'Пролетая на Тибетом',
@@ -43,13 +27,6 @@ const names = ['Паша', 'Гагик', 'Эмили', 'Эльвира', 'Алё
 
 let id = 1;
 
-const getRandomItenger = (a, b) => {
-  const lower = Math.ceil(Math.min(Math.abs(a), Math.abs(b)));
-  const upper = Math.floor(Math.max(Math.abs(a), Math.abs(b)));
-  const result = Math.random() * (upper - lower + 1) + lower;
-  return Math.floor(result);
-};
-
 // Источник: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 // eslint-disable-next-line no-unused-vars
 function getRandomIntInclusive(min, max) {
@@ -62,7 +39,7 @@ function getRandomIntInclusive(min, max) {
   }
 }
 
-const getRandomArrayObject = (elements) => elements[getRandomItenger(0, elements.length - 1)];
+const getRandomArrayObject = (elements) => elements[getRandomIntInclusive(0, elements.length - 1)];
 
 const getCommentsArray = (commentsCount) =>
   Array.from({ length: commentsCount }, () => ({
@@ -72,7 +49,7 @@ const getCommentsArray = (commentsCount) =>
     name: getRandomArrayObject(names),
   }));
 
-const newObjects = () => {
+const getNewObjects = () => {
   const currentID = id++;
   return {
     id: currentID,
@@ -83,7 +60,20 @@ const newObjects = () => {
   };
 };
 
-const getNewObjects = Array.from({ length: 25 }, newObjects);
-window.console.log(getNewObjects);
-window.console.log(Array.from({ length: 25 }, newObjects));
+/* const newObjects = Array.from({ length: 25 }, getNewObjects);
+window.console.log(newObjects); */
 
+
+const getNewObjects1 = (numberObjectsCreate) => {
+  const createKey = [];
+  for (let i = 0; i <= numberObjectsCreate - 1; i++) {
+    createKey[i] = {};
+    createKey[i].id = i;
+    createKey[i].url = `photos/${i}.jpg`;
+    createKey[i].description = getRandomArrayObject(description);
+    createKey[i].likes = getRandomIntInclusive(15, 200);
+    createKey[i].comments = [getRandomArrayObject(comments), `img/avatar-${getRandomIntInclusive(1, 6)}.svg`, getRandomArrayObject(names)];
+  }
+  return createKey;
+};
+window.console.log(getNewObjects1(25));
