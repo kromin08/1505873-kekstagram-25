@@ -1,16 +1,6 @@
-// Источник: http://kodesource.top/javascript/form/string-length.php
-const maxLenght = 140;
-const countComment = function (userComment) {
-  if (userComment.length <= maxLenght) {
-    return true;
-  } else {
-    Error('Максимальное количество символов комментария не более 140');
-    return false;
-  }
-};
-countComment('Комментарий посетителя сайта');
-
 // 4.9 Больше деталей.
+let id = 1;
+
 const description = ['Отель и море', 'Указатель к морю', 'Сейшеллы', 'Фотобикини',
   'Онсен-Кари', 'МакЛарен', 'Диета', 'Морс', 'Пляж и самолёт', 'Удобство хранения', 'Тропинка к пляжу',
   'RS5 на сликах', 'Высокая морская кухня', 'Суси из котэ', 'Домашние унты', 'Пролетая на Тибетом',
@@ -24,8 +14,6 @@ const comments = [
   'Я поскользнулся на банановой кожуре и уронил фотоаппарат на кота и у меня получилась фотография лучше.',
   'Лица у людей на фотке перекошены, как будто их избивают. Как можно было поймать такой неудачный момент?!'];
 const names = ['Паша', 'Гагик', 'Эмили', 'Эльвира', 'Алёша', 'Виолетта'];
-
-let id = 1;
 
 // Источник: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 function getRandomIntInclusive(min, max) {
