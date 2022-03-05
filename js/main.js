@@ -1,4 +1,3 @@
-
 // 4.9 Больше деталей.
 let id = 1;
 
@@ -16,8 +15,6 @@ const comments = [
   'Лица у людей на фотке перекошены, как будто их избивают. Как можно было поймать такой неудачный момент?!'];
 const names = ['Паша', 'Гагик', 'Эмили', 'Эльвира', 'Алёша', 'Виолетта'];
 
-
-// Источник: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
