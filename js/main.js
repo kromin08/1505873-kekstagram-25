@@ -3,6 +3,7 @@ import './util.js';
 import './filter.js';
 import './editor-file.js';
 import './upload-file.js';
+import './rendering-miniatures.js';
 
 const newObjects = Array.from({ length: 25 }, getNewObjects);
 window.console.log(newObjects);

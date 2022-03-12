@@ -1,4 +1,5 @@
 // Модуль с вспомогательными функциями.
+
 const checkCommentLength = 140;
 const countComment = function (userComment) {
   if (userComment.length <= checkCommentLength) {
