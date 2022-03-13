@@ -36,4 +36,6 @@ const getNewObjects = () => {
   };
 };
 
-export {getNewObjects};
+const newObjects = () => Array.from({length: 25}, getNewObjects);
+
+export {newObjects};
