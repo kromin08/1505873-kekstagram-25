@@ -1,4 +1,3 @@
-// Модуль с вспомогательными функциями.
 const checkCommentLength = 140;
 const countComment = function (userComment) {
   if (userComment.length <= checkCommentLength) {
@@ -22,6 +21,13 @@ function getRandomIntInclusive(min, max) {
 
 const getRandomArrayObject = (elements) => elements[getRandomIntInclusive(0, elements.length - 1)];
 
-export {getRandomIntInclusive};
-export {getRandomArrayObject};
+/* const isEscapeKey = (evt) => {
+ return evt.key === 'Escape';
+};
+
+const isEnterKey = (evt) => {
+  return evt.key === 'Enter';
+}; */
+
+export {getRandomArrayObject, getRandomIntInclusive};
 
