@@ -29,5 +29,5 @@ const isEnterKey = (evt) => {
   return evt.key === 'Enter';
 }; */
 
-export {getRandomArrayObject, getRandomIntInclusive};
+export {getRandomArrayObject, getRandomIntInclusive, countComment};
 
