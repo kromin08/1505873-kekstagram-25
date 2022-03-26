@@ -13,7 +13,7 @@ const showBigPicture = ({url, likes, comments, description}) => {
   commentsloaderButton.classList.add('hidden');
   body.classList.add('modal-open');
 
-  const bigPictureImg = bigPicture.querySelector('.big-picture__img img');  // img-тег из разметки
+  const bigPictureImg = bigPicture.querySelector('.big-picture__img img');
   bigPictureImg.src = url;
 
   const bigPictureLikes = bigPicture.querySelector('.likes-count');
@@ -53,3 +53,4 @@ bigPictureCancel.addEventListener('click', () => {
 
 
 export {showBigPicture};
+export {body};
